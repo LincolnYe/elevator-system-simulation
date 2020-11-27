@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>电梯系统</title>
+    <link href="images/leaf.png" rel="shortcut icon" type="image/x-icon"/>
+    <link
+            href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css"
+            rel="stylesheet"
+    />
+    <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <link
+            href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="js/utils.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/building_display.js"></script>
+    <script src="js/elevator-system.js"></script>
+    <script src="js/binding.js"></script>
+</head>
+<body>
+<div class=" head-info ">
+    <div class="building-info">
+        <p>楼层数目：<span id="floor_nums_info">10</span>&nbsp;<button class="btn btn-primary .btn-xs change_building-button"
+                                                                  id="change-floor-nums"
+                                                                  type="button">
+            更改
+        </button>&nbsp;电梯数目：<span id="elevator_nums_info">3</span>
+            <button class="btn btn-primary .btn-xs change_building-button" id="change-elevator_nums"
+                    type="button">更改
+            </button>
+
+        </p>
+        <div>
+            <div>更改电梯位置（所有电梯静止时使用有效）</div>
+            <button class="btn btn-info .btn-xs change_building-button half-one-half-distribution"
+                    type="button">一半电梯在一楼，一半分散分布
+            </button>
+            <button class="btn btn-info .btn-xs change_building-button all-one"
+                    type="button">全部电梯在一楼
+            </button>
+        </div>
+        <div>
+            <div>智能模式：所有电梯在空闲时自动分析系统状态并移动至缺乏电梯的楼层段</div>
+            <button class="btn btn-info .btn-xs enable-ai-mode-button"
+                    type="button">启动智能模式
+            </button>
+        </div>
+    </div>
+</div>
+<div class="g-content" id="g-building">
+    <div class="g-take-place"></div>
+    <div class="g-container"></div>
+    <div class="g-take-place"></div>
+</div>
+<div class="take-place-panel take-place-hidden"></div>
+<div id="g-panel-content">
+    <div class="g-take-place"></div>
+    <div id="g-panel-body"></div>
+    <div class="g-take-place"></div>
+</div>
+</body>
